@@ -21,6 +21,10 @@ add_executable(poisson
   tasks/smooth.cc
 )
 
+if(BENCHMARK_MODE)
+  target_compile_definitions(poisson PUBLIC BENCHMARK_MODE)
+endif()
+
 #------------------------------------------------------------------------------#
 # Add the FleCSI libraries and dependencies.
 #------------------------------------------------------------------------------#

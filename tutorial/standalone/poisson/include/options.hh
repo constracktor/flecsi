@@ -19,6 +19,11 @@ inline flecsi::program_option<double> error_tol("error-tolerance",
   "tolerance,t",
   "The maximum absolute residual tolerance.",
   {{flecsi::option_default, 1.0e-4}});
+#ifdef BENCHMARK_MODE
+inline flecsi::program_option<bool>
+  header("header,h", "Prints header in output file", false);
+#endif
 } // namespace poisson
+// namespace poisson
 
 #endif
